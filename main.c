@@ -42,7 +42,7 @@ void ajouter(struct Etudiant tab[], int *nb) {
     int i;
 
     if (*nb >= MAX_ETUDIANTS) {
-        printf("\nLa liste est pleine !\n");
+        printf("\nLa liste est pleine. \n");
         return;
     }
 
@@ -56,7 +56,7 @@ void ajouter(struct Etudiant tab[], int *nb) {
 
     /* On refuse deux étudiants avec le même matricule */
     if (trouver(tab, *nb, e.matricule) != -1) {
-        printf("\nCe matricule existe deja !\n");
+        printf("\nCe matricule existe deja .\n");
         return;
     }
 
@@ -68,7 +68,7 @@ void ajouter(struct Etudiant tab[], int *nb) {
 
             /* Verifier que la note est entre 0 et 20 */
             if (e.notes[i] < 0 || e.notes[i] > 20) {
-                printf("Note invalide ! Entrez une note entre 0 et 20.\n");
+                printf("Note invalide , Entrez une note entre 0 et 20.\n");
             }
 
         } while (e.notes[i] < 0 || e.notes[i] > 20);
